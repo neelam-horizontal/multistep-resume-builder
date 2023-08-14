@@ -18,7 +18,7 @@ const Resume = ({ formData, updateFormData }) => {
     hobbies,
   } = formData;
 
-  const srcProfile = `https://cdn-icons-png.flaticon.com/512/219/219969.png`;
+  const srcProfile = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ71Tc9Tk2q1eJUUlX1bXhWrc0-g8O9xnAplw&usqp=CAU`;
   const srcEduc = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt7LIEvm3TImUCPd5MxnTXKjRtF6Wk-ZK1GA&usqp=CAU`;
   const srcProf = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZcsjUdbIreixX1rCSwInS1wsAkkEnhnGKjw&usqp=CAU`;
   const srcHobby = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIlehISzMMeuMKI2sx-KsdrJD_u8ECReVFRQ&usqp=CAU`;
@@ -27,47 +27,65 @@ const Resume = ({ formData, updateFormData }) => {
   const [editedFormData, setEditedFormData] = useState({});
 
   const ref = useRef(null);
-  const openEditModal = () => {
-    setEditedFormData({
-      firstName,
-      lastName,
-      city,
-      phoneNumber,
-      email,
-      school,
-      sscHscPercentage,
-      highestDegree,
-      company1,
-      position1,
-      experience,
-      specialization,
-      hobbies,
-    });
-    setIsEditModalOpen(true);
-  };
+  // const openEditModal = () => {
+  //   setEditedFormData({
+  //     firstName,
+  //     lastName,
+  //     city,
+  //     phoneNumber,
+  //     email,
+  //     school,
+  //     sscHscPercentage,
+  //     highestDegree,
+  //     company1,
+  //     position1,
+  //     experience,
+  //     specialization,
+  //     hobbies,
+  //   });
+  //   setIsEditModalOpen(true);
+  // };
 
   // useEffect(() => {
   //   updateFormData(editedFormData)
   // }, [editedFormData])
 
-  const closeEditModal = () => {
-    setIsEditModalOpen(false);
-  };
+  // const closeEditModal = () => {
+  //   setIsEditModalOpen(false);
+  // };
+
+  // const handleEditInputChange = (field, value) => {
+  //   setEditedFormData((prevData) => ({ ...prevData, [field]: value }));
+  //   console.log(value)
+  // };
 
   const handleEditInputChange = (field, value) => {
     setEditedFormData((prevData) => ({ ...prevData, [field]: value }));
-    console.log(value)
+
+    // Update formData as well
+    updateFormData((prevFormData) => ({
+      ...prevFormData,
+      [field]: value,
+    }));
   };
 
+  // const saveEditedData = () => {
+  //   try {
+  //     console.log(editedFormData)
+  //   } catch (error) {
+  //     // closeEditModal();
+  //   console.log(error);
+  //   }
+
+  //   // closeEditModal();
+  // };
+  
   const saveEditedData = () => {
-    console.log(editedFormData)
     try {
       updateFormData(editedFormData);
     } catch (error) {
-      closeEditModal();
+      console.log(error);
     }
-
-    closeEditModal();
   };
 
   return (

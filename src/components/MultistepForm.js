@@ -4,6 +4,8 @@ import EducationDetails from "./EducationDetails";
 import ProfessionalBackground from "./ProfessionalBackground";
 import Hobbies from "./Hobbies";
 import Resume from "./Resume";
+import ResumeSummary from "./ResumeSummary";
+import ParentComponent from "./ParentComponent";
 
 const MultistepForm = () => {
   const [step, setStep] = useState(1);
@@ -100,7 +102,8 @@ const MultistepForm = () => {
       setErrors={setErrors}
       errors={errors}
     />,
-    <Resume formData={formData} />,
+    <Resume formData={formData} updateFormData={updateFormData} />,
+    <ResumeSummary formData={formData} />,
   ];
 
   return (

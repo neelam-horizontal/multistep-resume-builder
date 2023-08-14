@@ -17,7 +17,7 @@ const PersonalDetails = ({ formData, updateFormData, errors, setErrors }) => {
     return newErrors;
   };
 
-  const srcProfile = `https://cdn-icons-png.flaticon.com/512/219/219969.png`;
+  const srcProfile = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ71Tc9Tk2q1eJUUlX1bXhWrc0-g8O9xnAplw&usqp=CAU";
 
   return (
     <div className="mb-4 -mt-52">
