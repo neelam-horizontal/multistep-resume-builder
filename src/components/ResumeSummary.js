@@ -3,7 +3,6 @@ import React from "react";
 const ResumeSummary = ({ formData }) => {
   return (
     <div>
-      {/* Display the summary of formData */}
       <h2>Summary</h2>
       <p>Full Name: {`${formData.firstName} ${formData.lastName}`}</p>
       <p>City: {formData.city}</p>

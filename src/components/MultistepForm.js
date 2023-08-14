@@ -5,7 +5,6 @@ import ProfessionalBackground from "./ProfessionalBackground";
 import Hobbies from "./Hobbies";
 import Resume from "./Resume";
 import ResumeSummary from "./ResumeSummary";
-import ParentComponent from "./ParentComponent";
 
 const MultistepForm = () => {
   const [step, setStep] = useState(1);

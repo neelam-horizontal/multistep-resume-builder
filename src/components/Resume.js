@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { FaEdit } from "react-icons/fa";
 
 const Resume = ({ formData, updateFormData }) => {
@@ -23,62 +23,17 @@ const Resume = ({ formData, updateFormData }) => {
   const srcProf = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZcsjUdbIreixX1rCSwInS1wsAkkEnhnGKjw&usqp=CAU`;
   const srcHobby = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIlehISzMMeuMKI2sx-KsdrJD_u8ECReVFRQ&usqp=CAU`;
 
-  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editedFormData, setEditedFormData] = useState({});
 
   const ref = useRef(null);
-  // const openEditModal = () => {
-  //   setEditedFormData({
-  //     firstName,
-  //     lastName,
-  //     city,
-  //     phoneNumber,
-  //     email,
-  //     school,
-  //     sscHscPercentage,
-  //     highestDegree,
-  //     company1,
-  //     position1,
-  //     experience,
-  //     specialization,
-  //     hobbies,
-  //   });
-  //   setIsEditModalOpen(true);
-  // };
-
-  // useEffect(() => {
-  //   updateFormData(editedFormData)
-  // }, [editedFormData])
-
-  // const closeEditModal = () => {
-  //   setIsEditModalOpen(false);
-  // };
-
-  // const handleEditInputChange = (field, value) => {
-  //   setEditedFormData((prevData) => ({ ...prevData, [field]: value }));
-  //   console.log(value)
-  // };
 
   const handleEditInputChange = (field, value) => {
     setEditedFormData((prevData) => ({ ...prevData, [field]: value }));
-
-    // Update formData as well
     updateFormData((prevFormData) => ({
       ...prevFormData,
       [field]: value,
     }));
   };
-
-  // const saveEditedData = () => {
-  //   try {
-  //     console.log(editedFormData)
-  //   } catch (error) {
-  //     // closeEditModal();
-  //   console.log(error);
-  //   }
-
-  //   // closeEditModal();
-  // };
   
   const saveEditedData = () => {
     try {

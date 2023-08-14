@@ -31,7 +31,6 @@ const Hobbies = ({ formData, updateFormData, setErrors, errors }) => {
         }`}
         placeholder="Hobbies"
         value={hobbies}
-        // onChange={(e) => updateFormData({ hobbies: e.target.value })}
         onChange={(e) => handleInputChange("hobbies", e.target.value)}
         onBlur={() => setErrors(validateInputs())}
       />
