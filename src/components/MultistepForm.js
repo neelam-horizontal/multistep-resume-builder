@@ -116,7 +116,6 @@ const MultistepForm = () => {
               Previous
             </button>
           )}
-          {console.log(sections.length)}
           {step < sections.length && (
             <button
               onClick={nextStep}
