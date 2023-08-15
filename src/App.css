@@ -33,6 +33,10 @@
   color: #61dafb;
 }
 
+input {
+  border: 1px solid #d7d7d7;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

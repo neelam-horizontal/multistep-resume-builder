@@ -113,7 +113,7 @@ const MultistepForm = () => {
           {step > 1 && (
             <button
               onClick={prevStep}
-              className="bg-blue-500 text-white px-4 py-2 rounded"
+              className="bg-blue-500 hover:bg-blue-700 border border-blue-500 text-white px-4 py-2 cursor-pointer rounded-full"
             >
               Previous
             </button>
@@ -124,8 +124,8 @@ const MultistepForm = () => {
               className={`${
                 Object.keys(errors).length > 0
                   ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-blue-500"
-              } text-white px-4 py-2 rounded`}
+                  : "bg-blue-500 hover:bg-blue-700 cursor-pointer"
+              } text-white border border-blue-500 font-bold py-2 px-4 rounded-full`}
               disabled={
                 step < sections.length - 1 && Object.keys(errors).length > 0
               }

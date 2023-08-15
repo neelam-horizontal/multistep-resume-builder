@@ -373,7 +373,7 @@ const Resume = ({ formData, updateFormData }) => {
       </div>
       <button
         onClick={saveEditedData}
-        className="bg-blue-500 ml-[50%] text-white px-4 py-2 rounded"
+        className="bg-blue-500 hover:bg-blue-700 border border-blue-500 text-white px-4 py-2 cursor-pointer rounded-full ml-[50%]"
       >
         Save
       </button>
