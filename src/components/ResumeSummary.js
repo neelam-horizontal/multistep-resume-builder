@@ -40,9 +40,9 @@ const ResumeSummary = ({ formData }) => {
               src={UserIcon}
             />
           </div>
-          <div className="absolute top-[493px] left-[7px] w-[302px] h-[168px] overflow-hidden flex flex-col items-start justify-start">
+          <div className="absolute top-[493px] left-[7px] w-[400px] h-[168px] overflow-hidden flex flex-col items-start justify-start">
             <section
-              className="w-[302px] flex flex-col items-start justify-start text-right text-[60px] text-peru-100 font-roboto-slab"
+              className="w-[400px] flex flex-col items-start justify-start text-right text-[60px] text-peru-100 font-roboto-slab"
               id="firstName"
             >
               <h1 className="m-0 relative text-[inherit] tracking-[0.12em] font-bold font-inherit [-webkit-text-stroke:3px_#bb7a3b]">{formData.firstName}</h1>
@@ -69,7 +69,7 @@ const ResumeSummary = ({ formData }) => {
             <div className="self-stretch mt-[-10px]" />
           </div>
         </div>
-        <div className="relative w-[447px] h-[1695px] overflow-hidden shrink-0 text-xl text-gray-1">
+        <div className="relative w-[500px] h-[1695px] overflow-hidden shrink-0 text-xl text-gray-1">
           <section
             className="absolute top-[0px] left-[0px] w-[611px] h-[59px] text-left text-17xl text-gray font-roboto-slab"
             id="contact"
@@ -130,14 +130,14 @@ const ResumeSummary = ({ formData }) => {
           <div className="absolute top-[1244px] left-[0px] text-5xl tracking-[0.03em] leading-[170%] text-color flex items-center w-[444px] h-[352px]">
           {formData.hobbies}
           </div>
-          <div className="absolute top-[195px] left-[10px] w-[341px] h-20 overflow-hidden flex flex-row items-center justify-start gap-[35px]">
+          <div className="absolute top-[195px] left-[10px] w-[400px] h-20 overflow-hidden flex flex-row items-center justify-start gap-[35px]">
             <img
               className="relative w-20 h-20 overflow-hidden shrink-0"
               alt="phone"
               src={PhoneIcon}
             />
             <span
-              className="relative tracking-[0.05em] inline-block w-[226px] h-8 shrink-0"
+              className="relative tracking-[0.05em] inline-block w-[270px] h-8 shrink-0"
               id="phoneNumber"
             >
               {formData.phoneNumber}

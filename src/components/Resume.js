@@ -246,7 +246,7 @@ const Resume = ({ formData, updateFormData }) => {
                 height={50}
                 className="flex-none rounded-full object-cover"
               />
-              <h3 className="text-lg -ml-8 font-semibold">
+              <h3 className="text-lg md:-ml-8 font-semibold">
                 Professional Background
               </h3>
             </div>
@@ -353,12 +353,13 @@ const Resume = ({ formData, updateFormData }) => {
                 <dt className="text-sm font-medium text-gray-500">Hobbies</dt>
                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                   <span className="flex">
-                    <input
+                    <textarea
                       type="text"
                       className="w-full border rounded px-3 py-2 mb-2"
                       placeholder="Hobbies"
                       defaultValue={hobbies}
                       ref={ref}
+                      rows={5}
                       onChange={(e) =>
                         handleEditInputChange("hobbies", e.target.value)
                       }
@@ -373,7 +374,7 @@ const Resume = ({ formData, updateFormData }) => {
       </div>
       <button
         onClick={saveEditedData}
-        className="bg-blue-500 hover:bg-blue-700 border border-blue-500 text-white px-4 py-2 cursor-pointer rounded-full ml-[50%]"
+        className="bg-blue-500 hover:bg-blue-700 border border-blue-500 text-white px-4 py-2 cursor-pointer rounded-full sm:ml-[40%] md:ml-[50%]"
       >
         Save
       </button>
